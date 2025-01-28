@@ -1,6 +1,4 @@
 # QuickBIds_DJango_React
-This is a online bidding website using Django and react,
-Branch - master
+This is a online bidding website using Django and react
 <br>
-author- Parth Godhani
-
+author - Parth Godhani

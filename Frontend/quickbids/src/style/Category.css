@@ -1,0 +1,109 @@
+.category {
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.category-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.category-list {
+    height: 120px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    /* Adjusted minmax value */
+    gap: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.category-item {
+    max-width: 40px;
+    max-height: 100%;
+    margin: 20px;
+    text-align: center;
+}
+
+.category-item svg {
+    width: 100%;
+    height: 40px;
+    color: #333;
+}
+
+.category-item svg:hover {
+    color: blue;
+}
+
+.category-item h3 {
+    /* Prevents text from wrapping */
+    overflow: hidden;
+    /* Hides the overflowing text */
+    text-overflow: ellipsis;
+    /* Adds the ellipsis (...) */
+    width: 40px;
+    font-size: 10px;
+    margin-bottom: 10px;
+    text-overflow: ellipsis;
+}
+
+.category-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Responsive Styles */
+
+/* For screens smaller than 768px (tablets and smaller devices) */
+@media (max-width: 768px) {
+    .category-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .category-list {
+        grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+        /* Smaller grid items */
+    }
+
+    .category-item {
+        margin: 15px;
+    }
+
+    .category-item svg {
+        height: 30px;
+        /* Smaller icons */
+    }
+
+    .category-item h3 {
+        font-size: 8px;
+        /* Smaller text */
+    }
+}
+
+/* For screens smaller than 480px (mobile devices) */
+@media (max-width: 480px) {
+    .category-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .category-list {
+        grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+        /* Smaller grid for mobile */
+    }
+
+    .category-item {
+        margin: 10px;
+    }
+
+    .category-item svg {
+        height: 20px;
+        /* Smaller icons */
+    }
+
+    .category-item h3 {
+        font-size: 6px;
+        /* Smaller text */
+    }
+}
