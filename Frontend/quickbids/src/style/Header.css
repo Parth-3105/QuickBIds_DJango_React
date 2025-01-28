@@ -1,0 +1,182 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  color: black;
+  position: relative;
+}
+
+.logo a {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0a0d5c;
+  text-decoration: none;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li {
+  margin: 0 15px;
+}
+
+.nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav ul li a:hover {
+  color: #918d8d;
+  border-bottom: 1px solid black;
+}
+
+.nav ul li a:active {
+  font-weight: bold;
+  border-bottom: 2px solid #1b0764;
+}
+
+.cta .cta-button {
+  padding: 10px 20px;
+  background-color: #ff7f50;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.cta .cta-button:hover {
+  background-color: #ff6347;
+}
+
+/* User Icon Styles */
+.cta .user-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Hamburger button */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger {
+  width: 25px;
+  height: 3px;
+  background-color: #0a0d5c;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  width: 25px;
+  height: 3px;
+  background-color: #0a0d5c;
+  position: absolute;
+  left: 0;
+  transition: transform 0.3s ease;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  top: 8px;
+}
+
+.nav-open .hamburger {
+  transform: rotate(45deg);
+}
+
+.nav-open .hamburger::before {
+  transform: rotate(90deg) translate(-8px, -8px);
+}
+
+.nav-open .hamburger::after {
+  transform: rotate(90deg) translate(-8px, 8px);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: #0a0d5c;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  .nav ul {
+    flex-direction: column;
+  }
+
+  .nav ul li {
+    margin: 10px 0;
+  }
+
+  .nav ul li a {
+    color: #fff;
+    font-size: 20px;
+  }
+
+  .nav.nav-open {
+    display: flex;
+    z-index: 1000;
+    width: 30%;
+    left: 70%;
+    top: 100%;
+  }
+
+  .cta {
+    margin-top: 10px;
+  }
+  .nav-toggle {
+    display: block;
+    position: relative;
+    right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo a {
+    font-size: 20px;
+  }
+
+  .nav ul li a {
+    font-size: 16px;
+  }
+
+  .cta .cta-button {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .user-icon {
+    width: 35px;
+    height: 35px;
+  }
+}
+
