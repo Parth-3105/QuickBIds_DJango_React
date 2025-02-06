@@ -136,7 +136,7 @@ const ProductList = () => {
       try {
         const endpoint = categoryName
           ? `http://127.0.0.1:8000/api/products/category/${categoryName}`
-          : 'http://127.0.0.1:8000/api/products/';
+          : 'https://parth3105.pythonanywhere.com/api/products/';
         
         const response = await axios.get(endpoint);
         const products = response.data;
