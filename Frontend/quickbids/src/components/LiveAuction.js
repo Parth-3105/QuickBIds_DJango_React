@@ -9,7 +9,7 @@ const LiveAuction = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const endpoint = 'http://127.0.0.1:8000/api/products/';
+        const endpoint = 'https://parth3105.pythonanywhere.com//api/products/';
         const response = await axios.get(endpoint);
         const products = response.data
         const currentTime = new Date();
