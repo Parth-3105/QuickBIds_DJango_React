@@ -25,8 +25,8 @@ const SignupLogin = () => {
         e.preventDefault();
 
         const url = isLogin
-            ? "http://localhost:8000/api/login/"
-            : "http://localhost:8000/api/signup/";
+            ? "https://parth3105.pythonanywhere.com/api/login/"
+            : "https://parth3105.pythonanywhere.com/api/signup/";
 
         if (!formData.username || !formData.password) {
             setError("Please fill in all fields.");
