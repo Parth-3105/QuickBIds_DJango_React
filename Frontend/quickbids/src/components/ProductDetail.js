@@ -19,7 +19,7 @@ const ProductDetail = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`http://127.0.0.1:8000/api/products/${parseInt(id)}/`); // Fetch by ID
+        const response = await axios.get(`https://parth3105.pythonanywhere.com/api/products/${parseInt(id)}/`); // Fetch by ID
         let data = response.data;
         console.log(JSON.stringify(data));
 
@@ -104,7 +104,7 @@ const ProductDetail = () => {
 
     try {
       if (cBidder !== bidder) {
-        await axios.patch(`http://127.0.0.1:8000/api/products/${parseInt(id)}/`, {
+        await axios.patch(`https://parth3105.pythonanywhere.com/api/products/${parseInt(id)}/`, {
           current_BIDDER: bidder,
           current_BID: bidAmount,
           BidHistory: [...bidHistory, newBidEntry],
