@@ -10,7 +10,7 @@ const UserProducts = () => {
     const fetchProducts = async () => {
       try {
         // Fetch all products
-        const response = await axios.get('http://127.0.0.1:8000/api/insertUserProduct/');
+        const response = await axios.get('https://parth3105.pythonanywhere.com/api/insertUserProduct/');
         const filteredProducts = response.data.filter(product =>
           product.username === localStorage.getItem('username')
         );
@@ -18,7 +18,7 @@ const UserProducts = () => {
         // Fetch detailed info for each filtered product
         const productsWithDetails = await Promise.all(
           filteredProducts.map(async (product) => {
-            const detailResponse = await axios.get(`http://127.0.0.1:8000/api/products/${parseInt(product.ProductId)}/`);
+            const detailResponse = await axios.get(`https://parth3105.pythonanywhere.com/api/products/${parseInt(product.ProductId)}/`);
             return detailResponse.data;
           })
         );
